@@ -35,3 +35,6 @@ target_include_directories(OpenCRG PUBLIC
 # Installation rules
 set(CMAKE_INSTALL_PREFIX ${CMAKE_CURRENT_SOURCE_DIR}/lib)
 install(TARGETS OpenCRG DESTINATION ${CMAKE_INSTALL_PREFIX})
+
+file(GLOB INCLUDES inc/*.h)
+install(FILES ${INCLUDES} DESTINATION include)
