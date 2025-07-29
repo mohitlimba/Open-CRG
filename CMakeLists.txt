@@ -25,9 +25,11 @@ file(GLOB opencrg_sources
 # Create static library
 add_library(OpenCRG STATIC ${opencrg_sources})
 
+add_library(OpenCRG::OpenCRG ALIAS OpenCRG)
+
 # Include directories
 target_include_directories(OpenCRG PUBLIC
-    ${CMAKE_CURRENT_SOURCE_DIR}/inc
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/inc
 )
 
 # Installation rules
