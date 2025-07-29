@@ -25,7 +25,7 @@ file(GLOB opencrg_sources
 # Create static library
 add_library(OpenCRG STATIC ${opencrg_sources})
 
-add_library(OpenCRG::OpenCRG ALIAS OpenCRG)
+#add_library(OpenCRG::OpenCRG ALIAS OpenCRG)
 
 # Include directories
 target_include_directories(OpenCRG PUBLIC
@@ -36,5 +36,5 @@ target_include_directories(OpenCRG PUBLIC
 set(CMAKE_INSTALL_PREFIX ${CMAKE_CURRENT_SOURCE_DIR}/lib)
 install(TARGETS OpenCRG DESTINATION ${CMAKE_INSTALL_PREFIX})
 
-file(GLOB INCLUDES inc/*.h)
-install(FILES ${INCLUDES} DESTINATION include)
+#file(GLOB INCLUDES inc/*.h)
+#install(FILES ${INCLUDES} DESTINATION include)
