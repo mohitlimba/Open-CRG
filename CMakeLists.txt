@@ -29,7 +29,7 @@ add_library(OpenCRG::OpenCRG ALIAS OpenCRG)
 
 # Include directories
 target_include_directories(OpenCRG PUBLIC
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/inc
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/inc>
 )
 
 # Installation rules
