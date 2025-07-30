@@ -4,9 +4,6 @@ project(OpenCRG)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC -fvisibility=default")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -fvisibility=default -std=c++14")
-
 # OpenCRG source files
 file(GLOB opencrg_sources
     ${CMAKE_CURRENT_SOURCE_DIR}/src/crgMgr.c
@@ -30,6 +27,8 @@ add_library(OpenCRG STATIC ${opencrg_sources})
 # Include directories
 target_include_directories(OpenCRG PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/inc>
+    $<BUILD_INTERFACE:${OpenCRG_BINARY_DIR}>
+
 )
 
 # Installation rules
